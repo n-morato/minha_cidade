@@ -1,0 +1,167 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Seletores de elemento */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: lightblue;
+    font-family: sans-serif;
+}
+
+h1, h2 {
+    width: fit-content; /* Faz o h1 ter o tamanho exato do texto, em vez de ocupar toda a largura disponível */
+    margin: 0 auto; /* Centraliza o elemento (em elementos de bloco) */
+    margin-bottom: 60px;
+}
+
+h2 {
+    background-color: rgb(141, 166, 255);
+    border: 2px solid black;
+    padding: 5px;
+}
+
+p {
+    font-size: 1.03rem;
+    
+}
+
+ul {
+    list-style: none;
+}
+
+/* Seletores de classe */
+
+
+
+.menu_navegacao {
+    padding-top: 10px;
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+
+}
+.menu_navegacao li {
+    padding: 3px;
+}
+
+.menu_navegacao a {
+    color: black;
+    text-decoration: underline;
+}
+
+.menu_div {
+    background-color: orange;
+    border: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+.centralizar {
+   text-align: center;
+}
+
+.centralizar_flex {
+   display: flex;
+   justify-content: center;
+   text-align: center;
+}
+
+.pontos_turisticos {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.pontos_turisticos li {
+     display: flex;
+     flex-direction: column; /* Coloca o texto em cima e a imagem embaixo */
+     align-items: center;    /* Centraliza o conteúdo horizontalmente */
+     gap: 18px;  
+     margin-bottom: 0px;
+}
+
+.pontos_turisticos img {
+     height: 180px;
+     width: 220px;
+}
+
+.img {
+    border: 2px solid black;
+    transition: transform 0.3s; /* Define o tempo de espera para o efeito e a maneira que o efeito é aplicado (no caso aqui é transform, que muda suavemente) */
+    margin-bottom: 60px;
+}
+
+.img:hover {
+    transform: scale(1.05); /* Aumenta o tamanho para 1.05x ao passar o mouse */
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.galeria img {
+    flex-basis: 100px;
+    max-width: 400px;
+    height: 220px;
+}
+
+/* Seletores de ID */
+
+#pontos_turisticos {
+    margin-top: 60px;
+}
+
+#titulo_principal {
+    background-color: rgb(81, 119, 255);
+    border: 2px solid black;
+    padding: 10px;
+}
+
+/* Seletores de atributo */
+
+input[type="text"], input[type="tel"], input[type="email"] {
+   transition: background-color 0.3s; /* Tempo de transição de 0,3 segundos para mudar a cor de fundo */
+}
+
+input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus {
+    background-color: rgb(75, 153, 255);
+}
+
+
+/* Responsividade */
+
+@media (max-width: 1000px) {
+
+    * {
+        font-size: 0.85rem;
+    }
+
+    .pontos_turisticos img {
+        height: 180px;
+        width: 200px;
+    }
+
+    .galeria {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    .galeria img {
+        flex-basis: 100px;
+        max-width: 200px;
+        height: 180px;
+
+    }
+
+}
